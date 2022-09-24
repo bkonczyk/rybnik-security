@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class ExampleController {
 
-    @GetMapping("/hello")
+    @GetMapping
     String hello() {
         return "This is accessible by all";
     }
@@ -15,5 +15,10 @@ class ExampleController {
     @GetMapping("/secured")
     String secured() {
         return "This is for authenticated only";
+    }
+
+    @GetMapping("/admin")
+    String admin() {
+        return "This is for admins only";
     }
 }
